@@ -1,0 +1,22 @@
+:root {
+    --grid-cols: 16; /* Number of columns */
+    --grid-rows: 16; /* Number of rows */
+    --grid-item-size: 20px; /* Size of each grid item in pixels */
+  }
+  
+  #container {
+    display: grid;
+    grid-gap: 0px; /* Gap between grid items */
+    grid-template-rows: repeat(var(--grid-rows), var(--grid-item-size));
+    grid-template-columns: repeat(var(--grid-cols), var(--grid-item-size));
+  }
+  
+  .grid-item {
+    width: var(--grid-item-size);
+    height: var(--grid-item-size);
+    padding: 0; /* Remove padding to make the grid items fit perfectly */
+    margin: 0; /* Remove margin to make the grid items fit perfectly */
+    border: 1px solid #ddd;
+    box-sizing: border-box; /* Include padding and border in the width and height */
+  }
+  
